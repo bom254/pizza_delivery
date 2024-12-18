@@ -33,7 +33,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: SingleChildScrollView(
         child: SizedBox(
           height: MediaQuery.of(context).size.height,

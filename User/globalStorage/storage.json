@@ -1141,7 +1141,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1749,11 +1750,11 @@
             "folder": "file:///home/blogger/Documents/pizza_app",
             "backupPath": "/home/blogger/Documents/pizza_app/Backups/9f636c13d42c85e8af586a7919319af1",
             "uiState": {
-                "mode": 1,
-                "x": 16,
+                "mode": 0,
+                "x": 5,
                 "y": 64,
-                "width": 475,
-                "height": 711
+                "width": 1356,
+                "height": 699
             }
         },
         "openedWindows": []
