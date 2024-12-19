@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:pizza_repository/pizza_repository.dart';
 
 part 'get_pizza_event.dart';
 part 'get_pizza_state.dart';
@@ -7,7 +8,7 @@ part 'get_pizza_state.dart';
 class GetPizzaBloc extends Bloc<GetPizzaEvent, GetPizzaState> {
   final PizzaRepo _pizzaRepo;
   GetPizzaBloc(this._pizzaRepo) : super(GetPizzaInitial()) {
-    on<GetPizzaLoading>((event, emit) async {
+    on<GetPizza>((event, emit) async {
       //  implement event handler
       emit(GetPizzaLoading());
       try {

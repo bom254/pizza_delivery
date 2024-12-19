@@ -47,7 +47,7 @@ class Pizza {
       name: entity.name,
       description: entity.description,
       price: entity.price,
-      discount: entity.description,
+      discount: entity.discount,
       macros: entity.macros,
     );
   }

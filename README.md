@@ -4,13 +4,68 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Dependancies for the project
+1. font_awesome_flutter
+2. cupertino_icons
+3. firebase_core
+4. Assets with images
 
-A few resources to get you started if this is your first Flutter project:
+Project stucture 
+pizza_app/
+├── README.md               
+├── analysis_options.yaml   
+├── devtools_options.yaml   
+├── pubspec.yaml            
+├── pubspec.lock            
+├── pizza_app.iml           
+├── assets/                 
+│   ├── 1.png            
+│   ├── 2.png         
+│   └── 3.png
+│   └── 4.png
+│   └── 5.png
+│   └── 6.png
+│   └── 7.png
+│   └── 8.png
+│
+├── lib/                    
+│   ├── main.dart           
+│   ├── blocs/               
+│   │   ├── authentication_bloc/
+│   │       ├── authentication_bloc.dart      
+│   │       ├── authentication_event.dart 
+│   │       └── authentication_state.dart
+│   │    
+│   ├── app_view.dart             
+│   ├── app.dart                    
+│   ├── components/              
+│   │   ├── macro.dart          
+│   │   └── my_text_field.dart                      
+│   ├── screens/            
+│       ├── auth/   
+            ├── blocs/
+              ├── sign_in_bloc/     
+                ├── sign_in_bloc.dart
+                ├── sign_in_event.dart
+                └── sign_in_state.dart
+              └── sign_up_bloc/
+                ├── sign_up_bloc.dart
+                ├── sign_up_event.dart
+                └── sign_up_state.dart
+            └── views/
+                ├── sign_in_screen.dart
+                ├── sign_up_screen.dart
+                └── welcome_screen.dart
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+├── android/                
+├── ios/                    
+├── linux/                  
+├── macos/                  
+├── web/                    
+├── windows/                
+├── build/                  
+├── logs/                   
+        
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+

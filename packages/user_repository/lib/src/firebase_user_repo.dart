@@ -1,4 +1,4 @@
-import 'dart:nativewrappers/_internal/vm/lib/developer.dart';
+import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -6,12 +6,12 @@ import 'package:rxdart/rxdart.dart';
 
 import '../user_repository.dart';
 
-class FirebaseUserRepo  implements UserRepository {
+class FirebaseUserRepo implements UserRepository {
   final FirebaseAuth _firebaseAuth;
   final usersCollection = FirebaseFirestore.instance.collection('users');
 
   FirebaseUserRepo({
-    FirebaseAuth ? firebaseAuth,
+    FirebaseAuth? firebaseAuth,
   }) : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance;
 
   @override
@@ -25,8 +25,8 @@ class FirebaseUserRepo  implements UserRepository {
     //  implement setUserData
     try {
       await usersCollection
-      .doc(myUser.userId)
-      .set(myUser.toEntity().toDocument());
+          .doc(myUser.userId)
+          .set(myUser.toEntity().toDocument());
     } catch (e) {
       log(e.toString());
       rethrow;
@@ -37,7 +37,8 @@ class FirebaseUserRepo  implements UserRepository {
   Future<void> signIn(String email, String password) async {
     //  implement signIn
     try {
-      await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
+      await _firebaseAuth.signInWithEmailAndPassword(
+          email: email, password: password);
     } catch (e) {
       log(e.toString());
       rethrow;
@@ -49,9 +50,7 @@ class FirebaseUserRepo  implements UserRepository {
     //  implement signUp
     try {
       UserCredential user = await _firebaseAuth.createUserWithEmailAndPassword(
-        email: myUser.email, 
-        password: password
-      );
+          email: myUser.email, password: password);
 
       myUser.userId = user.user!.uid;
       return myUser;
@@ -65,16 +64,12 @@ class FirebaseUserRepo  implements UserRepository {
   // implement user
   Stream<MyUser> get user {
     return _firebaseAuth.authStateChanges().flatMap((firebaseUser) async* {
-      if(firebaseUser == null) {
+      if (firebaseUser == null) {
         yield MyUser.empty;
       } else {
-        yield await usersCollection
-          .doc(firebaseUser.uid)
-          .get()
-          .then((value) => MyUser.fromEntity(MyUserEntity.fromDocument(value.data()!)));
+        yield await usersCollection.doc(firebaseUser.uid).get().then((value) =>
+            MyUser.fromEntity(MyUserEntity.fromDocument(value.data()!)));
       }
     });
   }
-  
-  
 }
