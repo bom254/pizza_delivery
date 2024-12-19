@@ -11,7 +11,7 @@ final class SignInInitial extends SignInState {}
 
 final class SignInFailure extends SignInState {}
 
-final class SignInLoading extends SignInState {}
+final class SignInProccess extends SignInState {}
 
 final class SignInSuccess extends SignInState {}
 

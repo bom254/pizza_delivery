@@ -14,5 +14,5 @@ class SignUpRequired extends SignUpEvent {
   const SignUpRequired(this.user, this.password);
 
   @override
-  List<Object> get props => (user, password);
+  List<Object> get props => [user, password];
 }

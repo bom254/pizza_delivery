@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pizza_app/screens/auth/blocs/sign_up_bloc/sign_up_bloc.dart';
 import 'package:user_repository/user_repository.dart';
 
+import '../../../components/my_text_field.dart';
+
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
 
@@ -15,7 +17,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final passwordController = TextEditingController();
   final emailController = TextEditingController();
   final nameController = TextEditingController();
-  final ageController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
   IconData iconPassword = CupertinoIcons.eye_fill;
@@ -77,7 +78,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   obscureText: obscurePassword,
                   keyboardType: TextInputType.visiblePassword,
                   prefixIcon: const Icon(CupertinoIcons.lock_fill),
-                  onchanged: (val) {
+                  onChanged: (val) {
                     if(val!.contains(RegExp(r'[A-Z]'))) {
                       setState(() {
                         containsUpperCase = true;
