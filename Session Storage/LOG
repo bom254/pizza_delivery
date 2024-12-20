@@ -1,2 +1,3 @@
-2024/12/18-17:46:34.011 2eec Creating DB /home/blogger/Documents/pizza_app/Session Storage since it was missing.
-2024/12/18-17:46:34.491 2eec Reusing MANIFEST /home/blogger/Documents/pizza_app/Session Storage/MANIFEST-000001
+2024/12/20-13:03:53.487 54a9 Reusing MANIFEST /home/blogger/Documents/pizza_app/Session Storage/MANIFEST-000001
+2024/12/20-13:03:53.488 54a9 Recovering log #3
+2024/12/20-13:03:53.630 54a9 Reusing old log /home/blogger/Documents/pizza_app/Session Storage/000003.log 

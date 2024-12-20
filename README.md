@@ -18,7 +18,7 @@ pizza_app/
 ├── pubspec.yaml            
 ├── pubspec.lock            
 ├── pizza_app.iml           
-├── assets/                 
+├── assets/                                          # Contains images to the project
 │   ├── 1.png            
 │   ├── 2.png         
 │   └── 3.png
@@ -28,35 +28,44 @@ pizza_app/
 │   └── 7.png
 │   └── 8.png
 │
-├── lib/                    
-│   ├── main.dart           
-│   ├── blocs/               
-│   │   ├── authentication_bloc/
+├── lib/                                             # Codebase for the project
+│   ├── blocs/                                       
+│   │   └── authentication_bloc/                     # Handles the authentication logic for users
 │   │       ├── authentication_bloc.dart      
 │   │       ├── authentication_event.dart 
-│   │       └── authentication_state.dart
-│   │    
-│   ├── app_view.dart             
-│   ├── app.dart                    
-│   ├── components/              
+│   │       └── authentication_state.dart                   
+│   ├── components/                                  # Contains a styling method that can be easly resused throughout the code 
 │   │   ├── macro.dart          
 │   │   └── my_text_field.dart                      
-│   ├── screens/            
-│       ├── auth/   
-            ├── blocs/
-              ├── sign_in_bloc/     
-                ├── sign_in_bloc.dart
-                ├── sign_in_event.dart
-                └── sign_in_state.dart
-              └── sign_up_bloc/
-                ├── sign_up_bloc.dart
-                ├── sign_up_event.dart
-                └── sign_up_state.dart
-            └── views/
-                ├── sign_in_screen.dart
-                ├── sign_up_screen.dart
-                └── welcome_screen.dart
-
+│   ├── screens/                                     # Screens for the project
+│   |   ├── auth/                                    # Authentication screens
+|   |   |   ├── blocs/                               
+|   |   |   |  ├── sign_in_bloc/                     # Handles sign-in logic
+|   |   |   |  |  ├── sign_in_bloc.dart
+|   |   |   |  |  ├── sign_in_event.dart
+|   |   |   |  |  └── sign_in_state.dart
+|   |   |   |  └── sign_up_bloc/                     # Handles sign-up logic
+|   |   |   |     ├── sign_up_bloc.dart
+|   |   |   |     ├── sign_up_event.dart
+|   |   |   |     └── sign_up_state.dart
+|   |   |   └── views/                               # Displays authentication screens
+|   |   |       ├── sign_in_screen.dart
+|   |   |       ├── sign_up_screen.dart
+|   |   |       └── welcome_screen.dart
+|   |   └── home/                                    # Home screens
+|   |     ├── blocs/
+|   |     | └── get_pizza_bloc/                      # Handles cart and pizza's logic
+|   |     |   ├── get_pizza_bloc.dart
+|   |     |   ├── get_pizza_event.dart
+|   |     |   └── get_pizza_state.dart
+|   |     └── views/                                 # Detail and home screens
+|   |       ├── details_screen.dart          
+│   │       └── home_screen.dart
+|   |
+│   │    
+│   ├── app_view.dart             
+│   ├── app.dart 
+│   └── main.dart 
 ├── android/                
 ├── ios/                    
 ├── linux/                  
@@ -64,7 +73,7 @@ pizza_app/
 ├── web/                    
 ├── windows/                
 ├── build/                  
-├── logs/                   
+└──logs/                   
         
 
 
